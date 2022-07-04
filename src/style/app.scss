@@ -1,0 +1,147 @@
+:root{
+  --bg-white:#fff;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html {
+  font-size: 13.33vw;
+}
+
+body {
+  font-size: 0.14rem;
+  background-color: #f7f7f7;
+}
+a {
+  color: #333;
+}
+// 公共样式
+.respanse-img {
+  img {
+      max-width: 100%;
+  }
+ 
+}
+.container{
+  width: 100%;
+  padding: 0 .24rem;
+  background-color: var( --bg-white);
+}
+.mt-24 {
+  margin-top: .24rem;
+}
+.sub-nav {
+  background-color: var( --bg-white);
+  text-align: center;
+  padding: 0.2rem 0;
+  margin-top: .22rem;
+  h3{
+    margin: 0;
+    margin-top: 0.15rem;
+    color: #333;
+    font-size: 0.24rem;
+  }
+}
+.recommend{
+  display: flex;
+  width: 100%;
+  margin-top: .22rem;
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--bg-white);
+  padding: .24rem 10px 0;
+  p {
+    max-height: .3rem;
+  }
+  &>div{
+    flex: 0 0 calc(100% /4 - 10px);
+  }
+}
+.title {
+  position: relative;
+  height: .7rem;
+  line-height: .7rem;
+  text-align: center;
+  font-size: .32rem;
+  padding: 0 .24rem;
+  &>em{
+    display: block;
+    position: absolute;
+    right: .24rem;
+    top: 50%;
+    margin-top: -0.16rem;
+    width: .64rem;
+    height: .32rem;
+    line-height: .32rem;
+    font-style: normal;
+    font-size: .2rem;
+    text-align: center;
+    border:  1px solid #b4a078;
+    color: #b4a078;
+  }
+}
+
+.price {
+  color: red;
+  font-size: .2rem;
+}
+.h3-title {//多行溢出隐藏
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient :vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 80%;
+  min-height: 120px;
+  background-color: #fff;
+  text-align: center;
+}
+//覆盖vant原生样式
+.my-swipe {
+  .van-swipe-item {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    // background-color: #39a9ed;
+  }
+
+  .van-swipe__indicators {
+    left: 6.04rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.search {
+  position: relative;
+
+  .van-search {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    width: 6.75rem;
+    background-color: transparent;
+
+  }
+
+  .van-search__content {
+    background-color: rgba(241, 244, 244, 0.9);
+  }
+}

@@ -1,0 +1,16 @@
+.cart {
+  display: flex;
+  width: 100%;
+  padding: .15rem;
+}
+
+.cart dt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50px;
+}
+
+.cart dd {
+  flex: 1;
+}

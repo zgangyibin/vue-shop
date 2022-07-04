@@ -1,0 +1,15 @@
+.gutter-24 h3, .gutter-24 p {
+  padding: 0 .24rem;
+}
+
+.gutter-24 .van-col > div {
+  border: 1px solid #ebebeb;
+}
+
+.gutter-24 .van-col:nth-child(odd) {
+  padding-right: .12rem;
+}
+
+.gutter-24 .van-col:nth-child(even) {
+  padding-left: .12rem;
+}

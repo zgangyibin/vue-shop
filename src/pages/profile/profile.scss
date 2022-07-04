@@ -1,0 +1,83 @@
+.bg{
+    display: flex;
+    width: 100vw;
+    background-image: url(../../assets/user-bg.png);
+    background-size: 100% 100%;
+    height: 1.94rem;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    li:first-child{
+      flex: 0 0 1.6rem;
+    }
+    li:nth-child(2){
+      flex:1;
+      text-align: left;
+      color: #fff;
+    }
+    li:nth-child(3){
+      width: 1.2rem;
+    }
+    .van-image{
+      border: 2px solid #fff;
+    }
+  }
+  
+  .v-er{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    img{
+      width: 60%;
+      height: 60%;
+    }
+    border-radius: 50%;
+    background-color: rgba(252,162,75,0.5);
+  }
+  .btn-a{
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0 .1rem;
+    background-color: transparent;
+  }
+  .icon-list{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: .24rem 0;
+    li{
+      flex: 1;
+      width: 0;
+      span{
+        font-size: 39px;
+        color: #e3ba68;
+      }
+      p{
+        font-size: .32rem;
+        display: block; /* 内联元素需加上 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #fe6c71;
+      }
+      .f-pink{
+        color: #fe6c71;
+      }
+    }
+  }
+  .icon-list-wrap{
+    flex-wrap: wrap;
+    li{
+      flex: 0 0 25%;
+      margin-top: .26rem;
+    }
+  }
+  .bg-border{
+    background-image: url(../../assets/b_03.png);
+    background-repeat: no-repeat;
+    background-size: .13rem 100%;
+    background-position: right;
+  }
+ 
