@@ -39,13 +39,13 @@
             email:this.email,
             password: this.password
           },(res)=>{
-            let profile = res.data[0]
+            let profile = res.data[0].data
             if(profile.length===0){
               return Dialog.alert({
                   message: '用户名或者密码错误.',
                 })
             }
-            let token = res.data[0].token;
+            let token = res.token;
             localStorage.setItem("token",token); 
             this.$router.push("/profile");
           })

@@ -4,7 +4,6 @@ import api from "../api/api"
 export function getBanner(callback){//把请发请求的方法，单独封装为一个service做请求发送
     GET(api.getBanner,callback);
 }
-
 export function getAllProType(callback){
     GET(api.getAllProType,callback);
 }

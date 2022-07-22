@@ -42,7 +42,7 @@ export default {
         getData(params){
             getPro({
                 page:1,
-                orderbytype:"id",//按最新发布在前面
+                orderbytype:"popular",//按最新发布在前面
                 ...params,
             },(res)=>{
                 console.log(res)

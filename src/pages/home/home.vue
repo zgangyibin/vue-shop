@@ -14,11 +14,9 @@ export default {
                 { img: "1_03.png", title: "我的订单" },
                 { img: "1_06.png", title: "我的收藏" },
             ],
-            // bannerList:[],
-            // recommendList:[],
             recommendListColor: ["#e1e8f8", "#e0f3fb", "#fcf7ee", "#e2dff6"],
             dataList: {
-                id: [],
+                popular: [],
                 sales: []
             },
             imgUrl,
@@ -93,9 +91,9 @@ export default {
     </div>
     <div class="container mt-24">
         <div class="title">
-            <span v-show="dataType ==='id'" @click="getDataList('sales')" class="iconfont icon-left-circle"></span>
+            <span v-show="dataType ==='popular'" @click="getDataList('sales')" class="iconfont icon-left-circle"></span>
             <span>{{dataType=="sales"? "超值热卖":"最新上架" }}</span>
-            <span v-show="dataType ==='sales'" @click="getDataList('id')" class="iconfont icon-roundright"></span>
+            <span v-show="dataType=='sales'" @click="getDataList('popular')" class="iconfont icon-roundright"></span>
             <em>{{dataType ==='sales' ? "1/2":"2/2"}}</em>
         </div>
         <product-list :data="dataList[dataType]"/>

@@ -1,10 +1,3 @@
-/*
- * @Description: 
- * @Autor: lin
- * @Date: 2022-06-25 20:41:10
- * @LastEditors: zgangyibin 3112891950@qq.com
- * @LastEditTime: 2022-07-01 15:34:21
- */
 import { GET,POST } from '../utils/request'
 import api from "../api/api"
 
