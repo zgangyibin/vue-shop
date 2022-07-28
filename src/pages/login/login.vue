@@ -78,7 +78,7 @@
       left-arrow
       @click-left="onClickLeft"
     />
-    <div class="logo">时尚购物商城</div>
+    <div class="logo">张张购物商城</div>
     <div class="login-form">
       <van-field v-model="email" label="" placeholder="邮箱地址" />
       <van-field class="mt-24" v-model="password" label="" placeholder="密码" />

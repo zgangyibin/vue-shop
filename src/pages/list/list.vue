@@ -37,6 +37,7 @@ export default {
         init(){
             const {id} = this.$route.params;
             this.typeid = id[0];
+            // console.log(id[1])
             this.getData({typeid: id[0]=== "-1" ? "" : id[0],key:id[1]});//根据二级分类id号获取对应数据
         },
         getData(params){
@@ -73,7 +74,7 @@ export default {
             const {id} = this.$route.params;
             getPro({
                 page:++this.page,
-                orderbytype:"id",//按最新发布在前面
+                orderbytype:"id",
                 typeid: id[0]=== "-1" ? "" : id[0],
                 key:id[1]
             },(res)=>{

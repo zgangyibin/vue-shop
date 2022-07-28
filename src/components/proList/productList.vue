@@ -16,7 +16,6 @@ export default {
                     <van-image lazy-load :src="imgUrl+x.img.split(',')[0]" />
                     <h3 class="h3-title ">{{x.title}}</h3>
                     <p><span class="price">￥{{(x.price * x.discount).toFixed(2)}}</span> <del style="margin-left:.15rem">￥{{x.price}}</del></p>
-                   
                 </router-link>
             </van-col>
             <van-col span="12"></van-col>
