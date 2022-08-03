@@ -5,7 +5,7 @@ import moment from "moment";
 
 import { imgUrl } from "../../api/api";
 import { Notify } from "vant";
-import { getOrders,updateProStatus,saveArticle,updateOrders,updateOrderProlist } from "../../service/productService"
+import { getOrders,updateProStatus,saveArticle,updateOrderProlist } from "../../service/productService"
 const ORDER_STATUS= [
      "未付款",
     "未发货",
@@ -87,9 +87,6 @@ export default {
             })
         },
     },
-  
-  
-     
 }
 </script>
 <template>

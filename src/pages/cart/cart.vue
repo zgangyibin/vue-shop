@@ -25,6 +25,22 @@
             filedvalue: JSON.stringify(this.cartData),
           },()=>{})// 更新后端数据库个人购物车数据。
     },
+       computed:{
+      ...mapGetters("user",["profile"]),
+      cartData(){ // 购物车的计算属性
+        let data = this.profile.shoppingcart?JSON.parse(this.profile.shoppingcart):[];
+        return data
+      },
+      allPrice(){ // 计算选中商品的价格
+        let all = 0; // 商品总价
+        for(let i=0;i<this.cartData.length;i++){
+          if(this.idList.indexOf(this.cartData[i].id)>-1){ //计算所有选中商品的价格
+            all += this.cartData[i].price*this.cartData[i].stock
+          }
+        }
+        return all;
+      }
+    },
     methods:{
       ...mapActions("user",["profileAction"]),
       onClickLeft(){
@@ -95,10 +111,10 @@
           // 拿到订单编号，调用支付成功接口
           payOrder({
             orderid: res.data[1].id,
-            money: this.allPrice
+            money: data.allprice
           },() => {
             // 减去用户购买商品的钱,并且更新到本地缓存和服务器。真实的应该写在订单支付成功再去更新缓存，跳转到支付成功路由。
-            this.profile.mymoney -= this.allPrice;
+            this.profile.mymoney -= data.allprice;
             this.profileAction({data: {...this.profile,mymoney:this.profile.mymoney}});
             this.$router.push("/buyok");
           });
@@ -122,22 +138,6 @@
           this.profileAction({data: {...this.profile,shoppingcart:JSON.stringify(this.cartData)}}); // 更新vuex的profile里面的购物车缓存数据
       }
     },
-    computed:{
-      ...mapGetters("user",["profile"]),
-      cartData(){ // 购物车的计算属性
-        let data = this.profile.shoppingcart?JSON.parse(this.profile.shoppingcart):[];
-        return data
-      },
-      allPrice(){ // 计算选中商品的价格
-        let all = 0; // 商品总价
-        for(let i=0;i<this.cartData.length;i++){
-          if(this.idList.indexOf(this.cartData[i].id)>-1){ //计算所有选中商品的价格
-            all += this.cartData[i].price*this.cartData[i].stock
-          }
-        }
-        return all;
-      }
-    }
   }
 </script>
 
